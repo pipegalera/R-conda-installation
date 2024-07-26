@@ -1,4 +1,6 @@
-# R-conda-installation
+
+
+# MacOS: R-conda-installation
 
 ```
 conda create -n R jupyter -y
@@ -8,17 +10,25 @@ conda install conda-forge::r-irkernel -y
 conda install conda-forge::r-tidyverse -y
 ```
 
-### Open R from Terminal:
+# Ubuntu Server
 ```
-IRkernel::installspec(user=FALSE, name = 'ir41', displayname = 'R 4.1')
+sudo apt update
+sudo apt install r-base r-base-dev -y
+```
 
-install.packages('caret', dependencies = TRUE)
+### Open R from Terminal:
+
+```
+install.packages('IRkernel')
 install.packages('ggplot2')
 install.packages('glue')
 install.packages('recipes')
 install.packages('pROC')
-install.packages('arrow')
 install.packages('dplyr')
 install.packages('readxl')
 install.packages('doParallel')
+install.packages('arrow')
+install.packages('caret', dependencies = TRUE)
+IRkernel::installspec(user=FALSE, name = 'ir41', displayname = 'R 4.1')
+
 ```
