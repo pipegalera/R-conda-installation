@@ -9,7 +9,8 @@ conda install conda-forge::r-tidyverse -y
 ```
 
 ### Open R from Terminal:
-`IRkernel::installspec(user=FALSE, name = 'ir41', displayname = 'R 4.1')`
+```
+IRkernel::installspec(user=FALSE, name = 'ir41', displayname = 'R 4.1')
 
 install.packages('caret', dependencies = TRUE)
 install.packages('ggplot2')
@@ -20,3 +21,4 @@ install.packages('arrow')
 install.packages('dplyr')
 install.packages('readxl')
 install.packages('doParallel')
+```
